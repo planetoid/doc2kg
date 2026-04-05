@@ -1,0 +1,78 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix wd:     <https://www.wikidata.org/entity/> .
+@prefix ex:     <https://example.org/entity/> .
+
+# -------------------------------------------------------
+# Entities
+# -------------------------------------------------------
+
+wd:Q641861
+    rdf:type            schema:Organization ;
+    rdfs:label          "國立臺灣大學"@zh-TW ;
+    rdfs:label          "National Taiwan University"@en ;
+    schema:location     wd:Q703295 ;
+    schema:foundingDate "1928"^^xsd:gYear ;
+    schema:founder      ex:JapaneseColonialGovernmentTaiwan .
+
+wd:Q703295
+    rdf:type   schema:AdministrativeArea ;
+    rdfs:label "台北市大安區"@zh-TW ;
+    rdfs:label "Da'an District, Taipei"@en .
+
+ex:JapaneseColonialGovernmentTaiwan
+    rdf:type   schema:Organization ;
+    rdfs:label "日本殖民政府"@zh-TW ;
+    rdfs:label "Japanese Colonial Government of Taiwan"@en .
+
+wd:Q113855942
+    rdf:type   foaf:Person ;
+    rdfs:label "陳文章"@zh-TW ;
+    rdfs:label "Chen Wen-chang"@en .
+
+ex:NTU-CSIE
+    rdf:type   schema:Organization ;
+    rdfs:label "台大資訊工程學系"@zh-TW ;
+    rdfs:label "NTU Department of Computer Science and Information Engineering"@en ;
+    schema:isPartOf wd:Q641861 .
+
+wd:Q49108
+    rdf:type   schema:Organization ;
+    rdfs:label "麻省理工學院"@zh-TW ;
+    rdfs:label "Massachusetts Institute of Technology"@en .
+
+wd:Q180445
+    rdf:type   schema:Periodical ;
+    rdfs:label "《Nature》"@zh-TW ;
+    rdfs:label "Nature"@en .
+
+wd:Q15912278
+    rdf:type   schema:Organization ;
+    rdfs:label "科技部"@zh-TW ;
+    rdfs:label "National Science and Technology Council, Taiwan"@en .
+
+# -------------------------------------------------------
+# Relations
+# -------------------------------------------------------
+
+wd:Q113855942
+    org:memberOf wd:Q641861 .
+
+ex:NTU-CSIE
+    schema:colleague wd:Q49108 .
+
+# -------------------------------------------------------
+# Provenance (reified)
+# -------------------------------------------------------
+
+ex:prov-001
+    rdf:type          prov:Entity ;
+    prov:wasAttributedTo ex:NTU-CSIE ;
+    prov:generatedAtTime "2024-01-15T09:30:00Z"^^xsd:dateTime ;
+    ex:sourceSpan     "台大資訊工程學系與麻省理工學院（MIT）在人工智慧領域共同發表了多篇研究論文" ;
+    ex:confidence     "0.94"^^xsd:decimal .

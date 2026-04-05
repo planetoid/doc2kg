@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Entity",
+  "description": "A named entity extracted by the NER subskill.",
+  "type": "object",
+  "required": ["entity_id", "text", "label", "start", "end", "normalized", "confidence"],
+  "properties": {
+    "entity_id": {
+      "type": "string",
+      "pattern": "^e-\\d{3,}$",
+      "description": "Unique entity identifier in this document, e.g. e-001"
+    },
+    "text": {
+      "type": "string",
+      "description": "Exact span as it appears in the source text"
+    },
+    "label": {
+      "type": "string",
+      "enum": [
+        "PERSON", "ORG", "GPE", "LOC", "DATE", "TIME",
+        "MONEY", "PERCENT", "PRODUCT", "EVENT", "LAW",
+        "WORK_OF_ART", "EMAIL", "URL", "PHONE", "ID"
+      ],
+      "description": "NER label"
+    },
+    "start": {
+      "type": "integer",
+      "description": "Character offset of span start (inclusive)"
+    },
+    "end": {
+      "type": "integer",
+      "description": "Character offset of span end (exclusive)"
+    },
+    "normalized": {
+      "type": "string",
+      "description": "Canonical / normalized form of the mention"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Extraction confidence score"
+    },
+    "canonical_uri": {
+      "type": "string",
+      "format": "uri",
+      "description": "Populated by entity-linking; canonical knowledge base URI"
+    }
+  }
+}

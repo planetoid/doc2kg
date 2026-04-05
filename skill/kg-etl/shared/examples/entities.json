@@ -1,0 +1,115 @@
+{
+  "language": "zh-TW",
+  "entities": [
+    {
+      "entity_id": "e-001",
+      "text": "國立臺灣大學",
+      "label": "ORG",
+      "start": 0,
+      "end": 6,
+      "normalized": "National Taiwan University",
+      "confidence": 0.99,
+      "canonical_uri": "https://www.wikidata.org/entity/Q641861"
+    },
+    {
+      "entity_id": "e-003",
+      "text": "台北市大安區",
+      "label": "GPE",
+      "start": 12,
+      "end": 18,
+      "normalized": "Da'an District, Taipei",
+      "confidence": 0.97,
+      "canonical_uri": "https://www.wikidata.org/entity/Q703295"
+    },
+    {
+      "entity_id": "e-004",
+      "text": "日本殖民政府",
+      "label": "ORG",
+      "start": 21,
+      "end": 27,
+      "normalized": "Japanese Colonial Government of Taiwan",
+      "confidence": 0.91,
+      "canonical_uri": "https://example.org/entity/JapaneseColonialGovernmentTaiwan"
+    },
+    {
+      "entity_id": "e-005",
+      "text": "1928年",
+      "label": "DATE",
+      "start": 28,
+      "end": 33,
+      "normalized": "1928",
+      "confidence": 0.99,
+      "canonical_uri": null
+    },
+    {
+      "entity_id": "e-006",
+      "text": "陳文章",
+      "label": "PERSON",
+      "start": 42,
+      "end": 45,
+      "normalized": "Chen Wen-chang",
+      "confidence": 0.96,
+      "canonical_uri": "https://www.wikidata.org/entity/Q113855942"
+    },
+    {
+      "entity_id": "e-008",
+      "text": "台大資訊工程學系",
+      "label": "ORG",
+      "start": 72,
+      "end": 80,
+      "normalized": "NTU Department of Computer Science and Information Engineering",
+      "confidence": 0.94,
+      "canonical_uri": "https://example.org/entity/NTU-CSIE"
+    },
+    {
+      "entity_id": "e-009",
+      "text": "麻省理工學院",
+      "label": "ORG",
+      "start": 81,
+      "end": 87,
+      "normalized": "Massachusetts Institute of Technology",
+      "confidence": 0.99,
+      "canonical_uri": "https://www.wikidata.org/entity/Q49108"
+    },
+    {
+      "entity_id": "e-011",
+      "text": "2023年11月",
+      "label": "DATE",
+      "start": 106,
+      "end": 113,
+      "normalized": "2023-11",
+      "confidence": 0.98,
+      "canonical_uri": null
+    },
+    {
+      "entity_id": "e-012",
+      "text": "《Nature》",
+      "label": "WORK_OF_ART",
+      "start": 117,
+      "end": 125,
+      "normalized": "Nature (journal)",
+      "confidence": 0.97,
+      "canonical_uri": "https://www.wikidata.org/entity/Q180445"
+    },
+    {
+      "entity_id": "e-013",
+      "text": "科技部",
+      "label": "ORG",
+      "start": 132,
+      "end": 135,
+      "normalized": "National Science and Technology Council, Taiwan",
+      "confidence": 0.93,
+      "canonical_uri": "https://www.wikidata.org/entity/Q15912278"
+    },
+    {
+      "entity_id": "e-014",
+      "text": "MOST-112-AI-001",
+      "label": "ID",
+      "start": 141,
+      "end": 156,
+      "normalized": "MOST-112-AI-001",
+      "confidence": 0.99,
+      "canonical_uri": null
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "rdf":    "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs":   "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd":    "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "foaf":   "http://xmlns.com/foaf/0.1/",
+    "org":    "http://www.w3.org/ns/org#",
+    "prov":   "http://www.w3.org/ns/prov#",
+    "ex":     "https://example.org/entity/",
+    "wd":     "https://www.wikidata.org/entity/",
+    "label":        { "@id": "rdfs:label",          "@container": "@language" },
+    "location":     { "@id": "schema:location",      "@type": "@id" },
+    "isPartOf":     { "@id": "schema:isPartOf",      "@type": "@id" },
+    "memberOf":     { "@id": "org:memberOf",          "@type": "@id" },
+    "colleague":    { "@id": "schema:colleague",      "@type": "@id" },
+    "founder":      { "@id": "schema:founder",        "@type": "@id" },
+    "foundingDate": { "@id": "schema:foundingDate",   "@type": "xsd:gYear" },
+    "confidence":   { "@id": "ex:confidence",         "@type": "xsd:decimal" },
+    "sourceSpan":   { "@id": "ex:sourceSpan" }
+  },
+  "@graph": [
+    {
+      "@id": "wd:Q641861",
+      "@type": "schema:Organization",
+      "label": {
+        "zh-TW": "國立臺灣大學",
+        "en": "National Taiwan University"
+      },
+      "location": "wd:Q703295",
+      "foundingDate": "1928",
+      "founder": "ex:JapaneseColonialGovernmentTaiwan"
+    },
+    {
+      "@id": "wd:Q703295",
+      "@type": "schema:AdministrativeArea",
+      "label": {
+        "zh-TW": "台北市大安區",
+        "en": "Da'an District, Taipei"
+      }
+    },
+    {
+      "@id": "ex:JapaneseColonialGovernmentTaiwan",
+      "@type": "schema:Organization",
+      "label": {
+        "zh-TW": "日本殖民政府",
+        "en": "Japanese Colonial Government of Taiwan"
+      }
+    },
+    {
+      "@id": "wd:Q113855942",
+      "@type": "foaf:Person",
+      "label": {
+        "zh-TW": "陳文章",
+        "en": "Chen Wen-chang"
+      },
+      "memberOf": "wd:Q641861"
+    },
+    {
+      "@id": "ex:NTU-CSIE",
+      "@type": "schema:Organization",
+      "label": {
+        "zh-TW": "台大資訊工程學系",
+        "en": "NTU Department of Computer Science and Information Engineering"
+      },
+      "isPartOf": "wd:Q641861",
+      "colleague": "wd:Q49108"
+    },
+    {
+      "@id": "wd:Q49108",
+      "@type": "schema:Organization",
+      "label": {
+        "zh-TW": "麻省理工學院",
+        "en": "Massachusetts Institute of Technology"
+      }
+    },
+    {
+      "@id": "wd:Q180445",
+      "@type": "schema:Periodical",
+      "label": {
+        "zh-TW": "《Nature》",
+        "en": "Nature"
+      }
+    },
+    {
+      "@id": "wd:Q15912278",
+      "@type": "schema:Organization",
+      "label": {
+        "zh-TW": "科技部",
+        "en": "National Science and Technology Council, Taiwan"
+      }
+    },
+    {
+      "@id": "ex:prov-001",
+      "@type": "prov:Entity",
+      "prov:wasAttributedTo": { "@id": "ex:NTU-CSIE" },
+      "prov:generatedAtTime": {
+        "@value": "2024-01-15T09:30:00Z",
+        "@type": "xsd:dateTime"
+      },
+      "sourceSpan": "台大資訊工程學系與麻省理工學院（MIT）在人工智慧領域共同發表了多篇研究論文",
+      "confidence": "0.94"
+    }
+  ]
+}

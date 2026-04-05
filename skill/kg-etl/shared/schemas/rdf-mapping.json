@@ -1,0 +1,35 @@
+{
+  "prefixes": {
+    "rdf":    "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs":   "http://www.w3.org/2000/01/rdf-schema#",
+    "owl":    "http://www.w3.org/2002/07/owl#",
+    "xsd":    "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "foaf":   "http://xmlns.com/foaf/0.1/",
+    "org":    "http://www.w3.org/ns/org#",
+    "prov":   "http://www.w3.org/ns/prov#",
+    "ex":     "https://example.org/entity/"
+  },
+  "entity_mappings": [
+    { "ner_label": "PERSON",     "ontology_class": "foaf:Person",             "prefix": "foaf" },
+    { "ner_label": "ORG",        "ontology_class": "schema:Organization",     "prefix": "schema" },
+    { "ner_label": "GPE",        "ontology_class": "schema:AdministrativeArea","prefix": "schema" },
+    { "ner_label": "LOC",        "ontology_class": "schema:Place",            "prefix": "schema" },
+    { "ner_label": "DATE",       "ontology_class": "schema:Date",             "prefix": "schema" },
+    { "ner_label": "TIME",       "ontology_class": "schema:Time",             "prefix": "schema" },
+    { "ner_label": "MONEY",      "ontology_class": "schema:MonetaryAmount",   "prefix": "schema" },
+    { "ner_label": "PRODUCT",    "ontology_class": "schema:Product",          "prefix": "schema" },
+    { "ner_label": "EVENT",      "ontology_class": "schema:Event",            "prefix": "schema" },
+    { "ner_label": "LAW",        "ontology_class": "schema:Legislation",      "prefix": "schema" },
+    { "ner_label": "WORK_OF_ART","ontology_class": "schema:CreativeWork",     "prefix": "schema" }
+  ],
+  "relation_mappings": [
+    { "predicate": "worksFor",        "ontology_property": "org:memberOf",       "prefix": "org" },
+    { "predicate": "locatedIn",       "ontology_property": "schema:location",    "prefix": "schema" },
+    { "predicate": "partOf",          "ontology_property": "schema:isPartOf",    "prefix": "schema" },
+    { "predicate": "foundedBy",       "ontology_property": "schema:founder",     "prefix": "schema" },
+    { "predicate": "publishedOn",     "ontology_property": "schema:datePublished","prefix": "schema" },
+    { "predicate": "cites",           "ontology_property": "schema:citation",    "prefix": "schema" },
+    { "predicate": "collaboratesWith","ontology_property": "schema:colleague",   "prefix": "schema" }
+  ]
+}
