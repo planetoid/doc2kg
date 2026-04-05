@@ -12,7 +12,7 @@
   技能，從這份檔案中抽取出具代表性的實體（如人名、地名、語言、組織等），並將其轉換成符合 entity-schema.json 的 JSON 格式。
 
   由於資料量較大，我先針對前 100 筆資料進行 NER 處理作為示範。
-'''
+```
     1 {
     2   "language": "zh-TW",
     3   "entities": [
@@ -108,7 +108,7 @@
    93     }
    94   ]
    95 }
-'''
+```
   接下來的步驟，您可以選擇：
    1. 繼續處理剩餘的 CSV 內容（我可以分批處理）。
    2. 執行 entity-linking：將這些人名或地名連結到維基數據或特定的 URI。
@@ -123,7 +123,7 @@
   根據《當代中文課程》(A Course in Contemporary Chinese) 的背景，陳月美、李明華等是該教材中的虛擬角色。
 
   以下是連結後的實體列表：
-'''
+```
      1 {
      2   "language": "zh-TW",
      3   "entities": [
@@ -229,7 +229,7 @@
    103     }
    104   ]
    105 }
-'''
+```
   連結完成後，您可以選擇：
    1. 執行 relation-analysis：從定義中抽取關係（例如：e-001 (陳月美) -> originatesFrom -> e-010 (越南)）。
    2. 生成 RDF / Turtle：將這些實體與連結資訊轉換為圖資料庫可讀取的格式。
@@ -240,7 +240,7 @@
 ✦ 我將根據 CSV 檔案中的「英文定義」欄位，為先前識別出的實體執行 relation-analysis（關係分析）。
 
   這部分的分析主要聚焦於人物與其國籍或來源地之間的關係。
-'''
+```
     1 {
     2   "relations": [
     3     {
@@ -281,7 +281,7 @@
    38     }
    39   ]
    40 }
-'''
+```
   接下來的步驟，您可以選擇：
    1. 執行 rdf-construction：將實體與關係轉換為 Turtle (.ttl) 格式。
    2. 執行 provenance：將資料來源（Vocabulary_list.csv）標記為證據來源。
@@ -290,7 +290,7 @@
  > 1                                                                                                                                                     
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 ✦ 我將會根據剛才識別出的實體與關係，將其轉換為 RDF Turtle (.ttl) 格式。這包含了命名空間設定、實體定義以及它們之間的關係。
-'''
+```
     1 @prefix ex: <https://purl.org/net/clc/character/> .
     2 @prefix wd: <http://www.wikidata.org/entity/> .
     3 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
@@ -332,7 +332,7 @@
    39 wd:Q881 rdfs:label "越南"@zh-TW, "Vietnam"@en .
    40 wd:Q30 rdfs:label "美國"@zh-TW, "USA"@en .
    41 wd:Q17 rdfs:label "日本"@zh-TW, "Japan"@en .
-'''
+```
   轉換完成後，您可以選擇：
    1. 執行 graph-validation：驗證 URI 格式與三元組一致性。
    2. 執行 provenance：在 Turtle 檔案中加入對 Vocabulary_list.csv 的來源標註。
@@ -371,7 +371,7 @@
 
   這包含了命名空間宣告、人物實體定義、地理實體參照，以及它們之間的語意關係。下一個步驟我會將其儲存。
 
-'''
+```
     1 cat <<EOF > /home/john/vibe/gemini/triples.ttl
     2 @prefix ex: <https://purl.org/net/clc/character/> .
     3 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -415,10 +415,10 @@
    41 wd:Q30 rdfs:label "美國"@zh-TW, "USA"@en .
    42 wd:Q17 rdfs:label "日本"@zh-TW, "Japan"@en .
    43 EOF
-'''
+```
 
   我現在將內容寫入檔案。
-'''
+```
 ╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
 │ ✓  WriteFile Writing to triples.ttl                                                                                                               │
 │                                                                                                                                                   │
@@ -464,7 +464,7 @@
 │ 40 wd:Q30 rdfs:label "美國"@zh-TW, "USA"@en .                                                                                                     │
 │ 41 wd:Q17 rdfs:label "日本"@zh-TW, "Japan"@en .                                                                                                   │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-'''
+```
 ✦ 檔案已成功儲存至 /home/john/vibe/gemini/triples.ttl。
 
 
