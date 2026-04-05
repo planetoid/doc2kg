@@ -1,0 +1,41 @@
+@prefix ex: <https://purl.org/net/clc/character/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# 人物實體定義 (Characters)
+ex:Chen_Yuemei a schema:Person ;
+    rdfs:label "陳月美"@zh-TW ;
+    schema:name "Chen Yuemei" ;
+    schema:gender schema:Female ;
+    schema:nationality wd:Q881 ;
+    wdt:P27 wd:Q881 .
+
+ex:Li_Minghua a schema:Person ;
+    rdfs:label "李明華"@zh-TW ;
+    schema:name "Li Minghua" ;
+    schema:gender schema:Male ;
+    schema:nationality wd:Q865 ;
+    wdt:P27 wd:Q865 .
+
+ex:Wang_Kaiwen a schema:Person ;
+    rdfs:label "王開文"@zh-TW ;
+    schema:name "Wang Kaiwen" ;
+    schema:gender schema:Male ;
+    schema:nationality wd:Q30 ;
+    wdt:P27 wd:Q30 .
+
+ex:Zhang_Yijun a schema:Person ;
+    rdfs:label "張怡君"@zh-TW ;
+    schema:name "Zhang Yijun" ;
+    schema:gender schema:Female ;
+    schema:nationality wd:Q865 ;
+    wdt:P27 wd:Q865 .
+
+# 地理實體參照 (Geopolitical Entities)
+wd:Q865 rdfs:label "臺灣"@zh-TW, "Taiwan"@en .
+wd:Q881 rdfs:label "越南"@zh-TW, "Vietnam"@en .
+wd:Q30 rdfs:label "美國"@zh-TW, "USA"@en .
+wd:Q17 rdfs:label "日本"@zh-TW, "Japan"@en .
