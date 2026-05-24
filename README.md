@@ -6,6 +6,21 @@
 
 ---
 
+## 📋 來源聲明（Attribution）
+
+本專案 fork 自 **[e11106013/KG](https://github.com/e11106013/KG)**，原始著作權歸屬原作者 [@e11106013](https://github.com/e11106013)。
+
+原始 repo 未附任何授權條款。本 fork 在原始程式碼基礎上進行了以下修改：
+
+- 將 `7_sparql_nli_v3.ipynb`（Dash + Cytoscape）重寫為 `app.py`（Streamlit 版本）
+- 新增 `lib/` 前端支援套件
+- 補充 `THIRD_PARTY_LICENSES` 第三方授權聲明
+- 調整 README 說明文件
+
+> ⚠️ 原始程式碼版權屬於原作者，未附開放授權條款。若需轉載或衍生使用，請自行聯絡原作者確認授權。
+
+---
+
 ## 🚀 Streamlit 查詢介面
 
 ### `app.py`
