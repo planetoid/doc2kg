@@ -1,0 +1,27 @@
+# SPARQL 知識圖譜查詢 Streamlit App
+
+# Web 框架
+streamlit>=1.35.0
+
+# SPARQL / HTTP
+requests>=2.31.0
+SPARQLWrapper>=2.0.0
+beautifulsoup4>=4.12.0
+
+# 資料處理
+pandas>=2.0.0
+
+# 圖形視覺化
+pyvis>=0.3.2
+networkx>=3.2
+
+# LangChain（NL → SPARQL 用，可選）
+langchain>=0.2.0
+langchain-openai>=0.1.0
+langchain-community>=0.2.0
+
+# RDF（Pipeline 用，可選）
+rdflib>=7.0.0
+
+# PDF 解析（PDF 上傳 tab 用）
+pdfplumber>=0.10.0
